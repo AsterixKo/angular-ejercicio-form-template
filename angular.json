@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-ejercicio-form-template"
+    }
+  },
+  "defaultProject": "angular-ejercicio-form-template",
+  "cli": {
+    "analytics": false
+  }
 }
