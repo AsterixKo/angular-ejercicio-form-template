@@ -46,7 +46,7 @@
     <div class="form-group row">
       <label class="col-2 col-form-label">Ciudad:</label>
       <div class="col-8">
-        <input class="form-control" type="text" placeholder="Escribe tu ciudad" name="city" [ngModel]="firstName"
+        <input class="form-control" type="text" placeholder="Escribe tu ciudad" name="city" [ngModel]="city"
           required [class.is-invalid]="ciudad.invalid &&ciudad.touched"
           [class.is-valid]="!ciudad.invalid &&ciudad.touched" #ciudad="ngModel" minlength="3" maxlength="10">
         <small class="form-text text-danger" *ngIf="ciudad.invalid && ciudad.touched">La ciudad de be tener entre 3 y 10 
