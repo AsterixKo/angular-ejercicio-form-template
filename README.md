@@ -1,27 +1,13 @@
 # AngularEjercicioFormTemplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
+Crea un formulario de tipo Template con los siguientes campos:
 
-## Development server
+Nombre (obligatorio)
+Apellido (obligatorio)
+Edad
+Email (obligatorio)
+Ciudad
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Añade la validación necesaria para los campos. Asegúrate de añadir la validación adecuada al campo email.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+En caso de que algún campo sea incorrecto, muestra un mensaje informativo al usuario para que sepa qué debe escribir. Puedes utilizar estilos de Bootstrap para facilitar la tarea.

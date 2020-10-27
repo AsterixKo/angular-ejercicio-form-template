@@ -1,1 +1,71 @@
-<p>form-template works!</p>
+<h1>Form Template</h1>
+
+<hr>
+
+<form autocomplete="off" (ngSubmit)="saveForm(formdata)" #formdata="ngForm">
+  <div class="container">
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Nombre:</label>
+      <div class="col-8">
+        <input class="form-control" type="text" placeholder="Escribe tu nombre" name="name" [ngModel]="firstName"
+          required [class.is-invalid]="nombre.invalid &&nombre.touched"
+          [class.is-valid]="!nombre.invalid &&nombre.touched" #nombre="ngModel" minlength="3">
+        <small class="form-text text-danger" *ngIf="nombre.invalid && nombre.touched">El nombre debe tener al menos 3
+          letras y es requerido</small>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Apellido:</label>
+      <div class="col-8">
+        <input class="form-control" type="text" placeholder="Escribe tu apellido" name="lastName" [ngModel]="lastName"
+          required [class.is-invalid]="apellido.invalid &&apellido.touched"
+          [class.is-valid]="!apellido.invalid &&apellido.touched" #apellido="ngModel" minlength="3">
+        <small class="form-text text-danger" *ngIf="apellido.invalid && apellido.touched">El apellido debe tener al menos 3
+          letras y es requerido</small>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Edad:</label>
+      <div class="col-8">
+        <input class="form-control" type="number" placeholder="Escribe tu edad" name="age" [ngModel]="age"
+          [class.is-invalid]="edad.invalid &&edad.touched"
+          [class.is-valid]="!edad.invalid &&edad.touched" #edad="ngModel">
+        <small class="form-text text-danger" *ngIf="edad.invalid && edad.touched">La edad debe ser un número</small>
+      </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-2 col-form-label">Email:</label>
+        <div class="col-8">
+          <input class="form-control" type="text" placeholder="Escribe tu email" name="email" [ngModel]="emailAddress"
+            required [class.is-invalid]="email.invalid &&email.touched"
+            [class.is-valid]="!email.invalid &&email.touched" #email="ngModel" minlength="3"
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+          <small class="form-text text-danger" *ngIf="email.invalid && email.touched">Introduzca un email correcto</small>
+        </div>
+      </div>
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Ciudad:</label>
+      <div class="col-8">
+        <input class="form-control" type="text" placeholder="Escribe tu ciudad" name="city" [ngModel]="firstName"
+          required [class.is-invalid]="ciudad.invalid &&ciudad.touched"
+          [class.is-valid]="!ciudad.invalid &&ciudad.touched" #ciudad="ngModel" minlength="3" maxlength="10">
+        <small class="form-text text-danger" *ngIf="ciudad.invalid && ciudad.touched">La ciudad de be tener entre 3 y 10 
+          letras</small>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <button type="submit" class="btn btn-block btn-primary">Enviar</button>
+    </div>
+  </div>
+</form>
+
+<div>
+  <ul>
+    <li>Nombre: {{firstName}}</li>
+    <li>Apellido: {{lastName}}</li>
+    <li>Age: {{age}}</li>
+    <li>Email: {{emailAddress}}</li>
+    <li>City: {{city}}</li>
+  </ul>
+</div>
